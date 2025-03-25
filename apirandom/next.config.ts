@@ -1,7 +1,17 @@
 import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
-  /* config options here */
+module.exports = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'picsum.photos',
+        port: '',
+        pathname: '/200/300',
+        search: '',
+      },
+    ],
+  },
 };
 
-export default nextConfig;
+// export default nextConfig; // Removed as nextConfig is not defined
