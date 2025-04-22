@@ -1,17 +1,14 @@
-import type { NextConfig } from "next";
-
-module.exports = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   images: {
     remotePatterns: [
       {
         protocol: 'https',
         hostname: 'picsum.photos',
-        port: '',
-        pathname: '/200/300',
-        search: '',
+        pathname: '/**',
       },
     ],
   },
 };
 
-// export default nextConfig; // Removed as nextConfig is not defined
+module.exports = nextConfig;
